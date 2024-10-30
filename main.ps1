@@ -1,7 +1,7 @@
 @'
-$EXENAME = (($PWD).Path | Split-Path -Leaf) -replace "^deno-
+$EXENAME = ($PWD).Path | Split-Path -Leaf
 
-deno compile --allow-import --allow-read --allow-write --output $EXENAME .\main.ts
+deno compile --allow-import --allow-read --allow-write .\main.ts
 
 if ($LASTEXITCODE -eq 0) {
     if (Test-Path .\.env) {
