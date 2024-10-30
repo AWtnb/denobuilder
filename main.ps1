@@ -1,8 +1,5 @@
 @'
-$EXENAME = $args[0]
-if ($EXENAME.length -lt 1) {
-    $EXENAME = (($pwd).Path | Split-Path -Leaf) -replace "^deno-"
-}
+$EXENAME = (($PWD).Path | Split-Path -Leaf) -replace "^deno-
 
 deno compile --allow-import --allow-read --allow-write --output $EXENAME .\main.ts
 
