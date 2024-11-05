@@ -30,7 +30,7 @@ else {
     "Failed to build. Nothing was copied." | Write-Host -ForegroundColor Magenta
 }
 
-'@ | Out-File -Path "build.ps1"
+'@ | Out-File -Path "build.ps1" -Force
 New-Item -Path ".env" -ItemType File -ErrorAction SilentlyContinue
 
 $gi = ".gitignore"
